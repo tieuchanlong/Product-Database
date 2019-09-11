@@ -56,6 +56,7 @@ public class PageManage : MonoBehaviour
     IEnumerator AddProduct()
     {
         WWWForm form = new WWWForm();
+        Debug.Log("Get in");
 
         form.AddField("newname", NameInput.text);
         form.AddField("price", PriceInput.text);
