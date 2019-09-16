@@ -17,6 +17,7 @@ public class ProductInfo : MonoBehaviour
 
     public GameObject SearchPage;
     public GameObject DetailPage;
+    public static string changedName;
     
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,8 @@ public class ProductInfo : MonoBehaviour
         form.AddField("img", "");
         WWW www = new WWW("http://localhost/sqlconnect/product_get.php", form);  //access a page and get infor from it
         yield return www;
+
+        changedName = InputName.text;
 
         string[] productinfos = www.text.Split(new char[] { '*' });
         Debug.Log(www.text);

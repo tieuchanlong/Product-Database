@@ -58,11 +58,14 @@ public class PageManage : MonoBehaviour
         WWWForm form = new WWWForm();
         Debug.Log("Get in");
 
+        form.AddField("newname", ProductInfo.changedName);
         form.AddField("newname", NameInput.text);
         form.AddField("price", PriceInput.text);
         form.AddField("description", DescriptionInput.text);
         form.AddField("usage", UsageInput.text);
-        form.AddField("img", FileExplorer.imagestr);
+        form.AddField("img", UpdateProductPage.imagestr);
+
+        Debug.Log(UpdateProductPage.imagestr);
 
         WWW www = new WWW("http://localhost/sqlconnect/product_update.php", form);  //access a page and get infor from it
         yield return www;

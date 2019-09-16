@@ -17,6 +17,7 @@ public class UpdateProductPage : MonoBehaviour
     public static string imagestr;
     public static Texture2D ImgText;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +31,7 @@ public class UpdateProductPage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+
     }
 
     public void OpenExplorer()
@@ -40,7 +40,7 @@ public class UpdateProductPage : MonoBehaviour
         GetImage();
     }
 
-    void GetImage()
+    public void GetImage()
     {
         if (path != null)
         {
@@ -49,16 +49,19 @@ public class UpdateProductPage : MonoBehaviour
         }
     }
 
-    void UpdateImage()
+    public void UpdateImage()
     {
         WWW www = new WWW("file:///" + path);
         img.texture = www.texture;
+        ImgText = (Texture2D)img.GetComponent<RawImage>().texture;
+        byte[] TextureBytes = ImgText.EncodeToPNG();
+        imagestr = System.Convert.ToBase64String(TextureBytes);
     }
 
     /*public void ConvertImg()
     {
         ImgText = (Texture2D)img.GetComponent<RawImage>().texture;
         byte[] TextureBytes = ImgText.EncodeToPNG();
-        img = System.Convert.ToBase64String(TextureBytes);
+        imagestr = System.Convert.ToBase64String(TextureBytes);
     }*/
 }

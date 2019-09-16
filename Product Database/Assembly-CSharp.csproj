@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\ProductAddition\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\ProductAddition\FileExplorer.cs" />
     <Compile Include="Assets\Scripts\ProductAddition\ProductManager.cs" />
+    <Compile Include="Assets\Scripts\ProductSearch\FileExplorer1.cs" />
     <Compile Include="Assets\Scripts\ProductSearch\PageManage.cs" />
     <Compile Include="Assets\Scripts\ProductSearch\ProductInfo.cs" />
     <Compile Include="Assets\Scripts\ProductSearch\UpdateProductPage.cs" />

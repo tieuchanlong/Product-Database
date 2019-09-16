@@ -13,11 +13,12 @@ public class FileExplorer : MonoBehaviour
 
     public void OpenExplorer()
     {
+        Debug.Log("Pressed");
         path = EditorUtility.OpenFilePanel("Overwrite with png", "", "png");
         GetImage();
     }
 
-    void GetImage()
+    public void GetImage()
     {
         if (path != null)
         {
@@ -26,7 +27,7 @@ public class FileExplorer : MonoBehaviour
         }
     }
 
-    void UpdateImage()
+    public void UpdateImage()
     {
         WWW www = new WWW("file:///" + path);
         image.texture = www.texture;
