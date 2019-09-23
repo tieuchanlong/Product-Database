@@ -8,4 +8,4 @@
 
 ## Future innovation
 ### This database management will be developed later in the year. Some bugs related to changing and saving information will be fixed shortly within the next few weeks. 
-### Potential development features would be efficient search (without the need for exact name, maybe using ID like in the store instead?) and transaction data will be stored into a text file so that it can printed out by the end of the week or month, just like in the bank system.
+### Potential development features would be efficient search (without the need for exact name, maybe using ID like in the store instead?) and transaction data will be stored into a text file so that it can printed out by the end of the week or month, just like in the bank system. The database is still on local mode, which means I can only access the database on my computer. However, there is still a way to host execution by following the instruction in Database Instruction.
