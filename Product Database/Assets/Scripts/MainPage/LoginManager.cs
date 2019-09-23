@@ -58,9 +58,10 @@ public class LoginManager : MonoBehaviour
             while (passwordField.text.Length < password.Length) passwordField.text += "*";
         }
 
-        if (passwordField.text.Length < password.Length)
+        while (passwordField.text.Length < password.Length)
         {
-            password.Remove(password.Length - 1);
+            password = password.Remove(password.Length - 1);
+            Debug.Log("String longer");
         }
     }
 }

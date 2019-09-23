@@ -36,7 +36,9 @@ public class UpdateProductPage : MonoBehaviour
 
     public void OpenExplorer()
     {
+#if UNITY_EDITOR
         path = EditorUtility.OpenFilePanel("Overwrite with png", "", "png");
+#endif
         GetImage();
     }
 

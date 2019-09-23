@@ -14,7 +14,9 @@ public class FileExplorer : MonoBehaviour
     public void OpenExplorer()
     {
         Debug.Log("Pressed");
+#if UNITY_EDITOR
         path = EditorUtility.OpenFilePanel("Overwrite with png", "", "png");
+#endif
         GetImage();
     }
 

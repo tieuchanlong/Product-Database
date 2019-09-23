@@ -51,4 +51,9 @@ public class RegisterManager : MonoBehaviour
     {
         submitButton.interactable = (nameField.text.Length >= 8 && passwordField.text.Length >= 8);
     }
+
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
